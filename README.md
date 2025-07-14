@@ -48,20 +48,31 @@ npm start
 npm run dev
 ```
 
-### 5. Claude Codeでの設定 🤖
-Claude Codeの設定でMCPサーバーを登録:
-```json
-{
-  "mcpServers": {
-    "e-stat": {
-      "command": "node",
-      "args": ["/path/to/e-stat-mcp-server/src/index.js"]
-    }
-  }
-}
+## Claude Code での使用
+
+Claude Code では `claude mcp add` コマンドでMCPサーバーを登録します：
+
+```bash
+# プロジェクトに移動
+cd /path/to/osm-geojson-mcp-server
+
+# 実行権限を付与（初回のみ必要）
+chmod +x src/index.js
+
+# MCPサーバーを登録（ローカルスコープ）
+claude mcp add osm-geojson node src/index.js
+
+# または絶対パスで登録
+claude mcp add osm-geojson [absolute path to]/e-stat-data-download-mcp-server/src/index.js
 ```
 
-## 💬 Claudeでの使用例
+詳細は [Claude Code MCP ドキュメント](https://docs.anthropic.com/ja/docs/claude-code/mcp) を参照してください。
+
+### 使用開始
+
+claudeを起動後`/mcp`コマンドを実行しMCPが正しく接続できているか確認してください。
+
+`✔ connected`が表示されていれば正常に動作しています。
 
 ### 📊 人口統計データの検索
 ```
