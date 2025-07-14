@@ -1,0 +1,23 @@
+{
+  "name": "data-download-mcp-server-template",
+  "version": "0.1.0",
+  "description": "汎用データダウンロードMCPサーバーテンプレート",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "npx @modelcontextprotocol/inspector node src/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.15.1",
+    "axios": "^1.7.2",
+    "dotenv": "^17.2.0"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "template"
+  ],
+  "author": "",
+  "license": "MIT"
+}
